@@ -1,0 +1,42 @@
+"""Recursive exponentiation for natural number exponents"""
+
+def recurPowerNew(base, exp):
+    if exp == 0:
+        return 1
+    elif exp%2 == 0:
+        return recurPowerNew(base*base, exp/2)
+    elif exp%2 != 0:
+        return base * recurPowerNew(base, exp - 1)
+
+"""Euclidean algorithm"""
+
+def gcdRecur(a, b):
+    '''
+    a, b: positive integers
+    
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    # Your code here
+    if b == 0:
+        return a
+    else:
+        return gcdRecur(b, a%b)
+        
+"""Iterative greatest common denominator finder"""
+
+def gcdIter(a, b):
+    '''
+    a, b: positive integers
+    
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    # Your code here
+    small = min(a,b)
+    large = max(a,b)
+    divisor = small
+    while True:
+        if large % divisor == 0 and small % divisor == 0:
+            return divisor
+            break
+        else:
+            divisor = divisor - 1
