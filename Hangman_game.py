@@ -1,6 +1,6 @@
 # This is a traditional hangman game made for an online course.
 # The code toward the top was provided.
-# I wrote all the code below "# end of helper code".
+# I wrote the code below "# end of helper code" with conceptual guidance from the problem set.
 # This game depends on a "words.txt" file
 # that it randomly draws its secret word from
 # for each game (the word that the player is guessing).
